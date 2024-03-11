@@ -1,0 +1,12 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.flexExpand {
+    flex: 1 1 auto;
+}
+
+mat-icon {
+    size: 60%;
+}

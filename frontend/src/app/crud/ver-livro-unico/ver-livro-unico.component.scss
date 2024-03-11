@@ -1,0 +1,53 @@
+#Titulo {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#Subtitulo {
+    font-size: 32px;
+
+}
+
+#Sinopse {
+    font-size: 30px;
+}
+
+#preco {
+    font-size: 40px;
+}
+
+#sinopse-paragraph {
+    font-size: 22px;
+}
+
+
+.sinopse-class {
+    align-items: start;
+
+}
+
+section {
+    margin: 4%;
+    flex-direction: row;
+    display: flex;
+}
+
+.campo {
+    width: 80%;
+}
+
+#Sinopse {
+    height: max-content;
+}
+
+body {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.image-class {
+    max-height: 500px;
+    height: 80%;
+    width: auto;
+}

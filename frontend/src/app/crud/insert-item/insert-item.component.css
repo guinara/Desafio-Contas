@@ -1,0 +1,33 @@
+form {
+    padding: 30px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+section {
+    margin: 4%;
+    flex-direction: row;
+    display: flex;
+}
+
+.campo {
+    width: 80%;
+}
+
+#Sinopse {
+    height: max-content;
+}
+
+.Botao {
+    width: 45%;
+}
+
+.Botoes {
+    justify-content: space-between;
+}
+
+.file-input {
+    display: none;
+}

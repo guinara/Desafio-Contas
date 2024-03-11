@@ -1,0 +1,40 @@
+<section>
+    <form (submit)="editar($event)">
+        <h1> Edição de livro</h1>
+        <mat-form-field class="campo" [maxlength]="100" ngDefaultControl [(ngModel)]="livro.titulo"
+            [ngModelOptions]="{standalone: true}">
+            <mat-label>Titulo</mat-label>
+            <input matInput type="text" value={{livro.titulo}}>
+        </mat-form-field>
+        <mat-form-field class="campo">
+            <mat-label>Autor</mat-label>
+            <input matInput type="text" [maxlength]="60" matInput placeholder="Rick Riordan" ngDefaultControl
+                [(ngModel)]="livro.autor" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+
+        <mat-form-field id="Sinopse" class="campo">
+            <mat-label>Sinopse</mat-label>
+            <textarea matInput placeholder="Ex. A história é sobre..." ngDefaultControl [(ngModel)]="livro.sinopse"
+                [ngModelOptions]="{standalone: true}" [maxlength]="1200"></textarea>
+        </mat-form-field>
+        <mat-form-field class="campo">
+            <mat-label>Preco</mat-label>
+            <input matInput type="text" matInput placeholder="Ex. 42.43" ngDefaultControl [(ngModel)]="livro.preco"
+                [ngModelOptions]="{standalone: true}" [maxlength]="10">
+        </mat-form-field>
+        <div class="Botoes">
+            <button type="submit" mat-raised-button color="primary" class="Botao">
+                Atualizar
+            </button>
+
+            <button mat-raised-button (click)="cancelar()" color="primary" class="Botao">
+                Cancelar
+            </button>
+            <button mat-raised-button (click)="deletar()" color="warn" class="Botao">
+                Deletar
+            </button>
+        </div>
+
+    </form>
+    <img src="{{livro.imagem}}">
+</section>

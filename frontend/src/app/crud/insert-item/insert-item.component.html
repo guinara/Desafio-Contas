@@ -1,0 +1,54 @@
+<section>
+    <form [formGroup]="formulario" (submit)="inserir()">
+        <h1> Inserção de livro</h1>
+        <mat-form-field class="campo">
+
+            <mat-label>Titulo</mat-label>
+            <input matInput type="text" formControlName="titulo" matInput placeholder="Ex. Percy Jackson"
+                ngDefaultControl [maxlength]="100">
+            <mat-error *ngIf="formulario.get('preco')?.invalid">O campo Título é obrigatório</mat-error>
+        </mat-form-field>
+        <mat-form-field class="campo">
+            <mat-label>Autor</mat-label>
+            <input matInput type="text" matInput placeholder="Ex. Rick Riordan" formControlName="autor"
+                [maxlength]="60">
+            <mat-error *ngIf="formulario.get('preco')?.invalid">O campo Autor é obrigatório</mat-error>
+        </mat-form-field>
+
+        <mat-form-field id="Sinopse" class="campo">
+            <mat-label>Sinopse</mat-label>
+            <textarea matInput placeholder="Ex. A história é sobre..." ngDefaultControl formControlName="sinopse"
+                [maxlength]="1200"></textarea>
+            <mat-error *ngIf="formulario.get('preco')?.invalid">O campo Sinopse é obrigatório com menos de 1200
+                caracteres</mat-error>
+        </mat-form-field>
+        <mat-form-field class="campo" ngDefaultControl>
+            <mat-label>Preço</mat-label>
+            <input matInput type="number" matInput placeholder="2.55" formControlName="preco" pattern="^\d[,.?!\d]+$"
+                [maxlength]="10">
+            <mat-error *ngIf="formulario.get('preco')?.invalid">O campo Preço é obrigatório no formato
+                numérico</mat-error>
+        </mat-form-field>
+        <div class="Botoes">
+            <button type="submit" mat-raised-button color="primary" class="Botao">
+                Inserir
+            </button>
+
+            <button mat-raised-button (click)="voltar()" color="accent" class="Botao">
+                Cancelar
+            </button>
+
+        </div>
+    </form>
+    <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+
+    <div class="file-upload">
+
+        {{fileName || "Nenhuma imagem enviada."}}
+
+        <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+            <mat-icon>attach_file</mat-icon>
+        </button>
+    </div>
+
+</section>

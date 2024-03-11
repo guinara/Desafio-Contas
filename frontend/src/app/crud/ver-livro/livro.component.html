@@ -1,0 +1,13 @@
+<section class="livros">
+    @for (livro of livros; track livro) {
+    <mat-card class="livro" [routerLink]="['/livro/', livro.idLivro]" routerLinkActive="active">
+        <mat-card-header>
+            <mat-card-title>{{ livro.titulo}}</mat-card-title>
+            <mat-card-subtitle style="color: white;">{{ livro.autor }}</mat-card-subtitle>
+            <mat-card-subtitle style="color: white;">{{ livro.preco | currency : 'BRL'}}</mat-card-subtitle>
+            <mat-icon [routerLink]="['/livro/editar', livro.idLivro]" routerLinkActive="active">edit</mat-icon>
+        </mat-card-header>
+        <img height="100%" src={{livro.imagem}}>
+    </mat-card>
+    }
+</section>

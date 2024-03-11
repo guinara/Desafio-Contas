@@ -1,0 +1,18 @@
+<section>
+    <div class="mat-typography">
+        <h1 id="Titulo"> {{livro.titulo}} </h1>
+        <h1 id="Subtitulo">{{livro.autor}}</h1>
+
+        <div class=" sinopse-class">
+            <mat-label id="Sinopse" class="campo">Sinopse</mat-label>
+            <p id="sinopse-paragraph">{{livro.sinopse}}</p>
+        </div>
+
+
+    </div>
+    <div class="image-class">
+        <img src="{{livro.imagem}}" class="image-class">
+        <section id="preco">{{ livro.preco | currency : 'BRL'}}</section>
+    </div>
+
+</section>

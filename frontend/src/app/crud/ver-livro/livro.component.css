@@ -1,0 +1,23 @@
+.livro {
+    color: white;
+    background-color: #666e7c;
+    min-height: 1fr;
+    width: 100%;
+}
+
+.livros {
+    padding: 10px;
+    justify-content: center;
+    justify-items: center;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, minmax(320px, 400px));
+}
+
+.icon {
+    size: 30px;
+}
+
+img {
+    cursor: pointer;
+}
