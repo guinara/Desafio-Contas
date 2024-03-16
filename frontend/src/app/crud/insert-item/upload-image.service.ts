@@ -11,7 +11,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 export class UploadImageService {
 
-    private API_ENDPOINT = 'https://ypguhu160d.execute-api.sa-east-1.amazonaws.com/uploads'
+    private API_ENDPOINT = 'SiteGateway'
     constructor(private http: HttpClient) { }
 
     async uploadImage(file: File, uploadURL: string): Promise<string> {
